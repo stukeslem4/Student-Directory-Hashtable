@@ -1,0 +1,102 @@
+/*Stukes Lemon IV
+ * October 24, 2018
+ * The purpose of this code is to create a student
+ * directory.
+ */
+import java.util.Hashtable;
+import java.util.Scanner;
+public class MenuAssignment {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	Scanner F=new Scanner(System.in);
+	
+	Hashtable<Integer,String>student=new Hashtable<Integer,String>();//Sets up the hashtable
+	student.put(1,"John");
+	student.put(2,"Ashley");	
+    student.put(3,"Stukes");
+	student.put(4,"Matt");	
+	student.put(5,"Sam");
+	student.put(6,"Alexa");	
+		
+	//System.out.println(Student);	
+	
+	int choice;//holds the value for the menu choice
+	String add;//used to store value of #1
+	
+	
+	int a;//used to store value for #2
+	int b;//used to store value for #3
+
+	
+	Scanner T=new Scanner(System.in);
+	Scanner v=new Scanner(System.in);
+	do
+	{
+	
+	System.out.println("**********************");
+	System.out.println("***     Menu    ***");
+	System.out.println("1) Add a student");
+	System.out.println("2) Search for a student");
+	System.out.println("3)Remove a student");
+	System.out.println("4) Print Directory");
+	System.out.println("5) Exit");
+	System.out.println("**********************");
+	System.out.println("Please enter your choice:");
+	
+	choice=F.nextInt();
+	
+	if(choice==1) {
+	
+	System.out.println("You chose add a student");
+	System.out.println("Please enter the name of the student you would like to add ");
+	add = T.nextLine();
+	System.out.println(student.put(7,add));
+	System.out.println(student);
+	System.out.println("**********************");
+	
+	}
+	
+	else if(choice==2) {
+		System.out.println("You chose search for a student");
+		System.out.println("Please enter the student you would like to search for");
+		a=v.nextInt();
+		
+		
+		System.out.println(student.get(a));
+		System.out.println("**********************");
+	
+	}
+
+	else if(choice==3) {
+		System.out.println("You chose remove a student");
+		System.out.println("Please enter the student you would like to remove ");
+		b = v.nextInt();
+		System.out.println(student.remove(b));
+		System.out.println(student);
+		System.out.println("**********************");
+	
+	}
+
+
+	else if(choice==4) {
+		System.out.println("You chose to print the directory");
+		System.out.println(student);
+		System.out.println("**********************");
+	
+	}
+	else {
+	System.out.println("You entered an invalid number! Try again.");
+
+}
+
+	
+	}
+	while(choice !=5);
+	
+	System.out.println("You chose to end the program, goodbye");
+	}
+
+}
+
